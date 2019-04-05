@@ -5,6 +5,8 @@ Grafana - это визуализатор данных. Grafana позволяе
 ## Установка
 
     touch grafana.sh
+    Добавь с файл https://github.com/chatlamin/Grafana-docker/blob/master/grafana.sh
+
 [Источник](http://docs.grafana.org/installation/docker/#migration-from-a-previous-version-of-the-docker-container-to-5-1-or-later)
 
 ## Установка плагинов
