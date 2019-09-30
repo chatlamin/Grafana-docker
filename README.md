@@ -4,19 +4,30 @@ Grafana - это визуализатор данных. Grafana позволяе
 
 ## Установка
 
-    touch grafana.sh
-    Добавь в файл grafana.sh https://github.com/chatlamin/Grafana-docker/blob/master/grafana.sh
-
-[Источник](http://docs.grafana.org/installation/docker/#migration-from-a-previous-version-of-the-docker-container-to-5-1-or-later)
-
-## Установка плагинов
-
-    docker exec grafana grafana-cli plugins install alexanderzobnin-zabbix-app
-
-После установки плагинов сделай рестарт контейрена
+    run-container.sh
 
 http://укажиipадрес:3000/
 
 login: admin
 
 password: admin
+
+## [Backup/restore database](https://grafana.com/docs/installation/upgrading/#database-backup)
+
+Путь в базе внутри контейнера /var/lib/grafana/grafana.db
+
+Путь к базе на хосте /home/docker/containers/grafana/var/lib/grafana/grafana.db
+
+### Backup
+
+Просто скопируйте файл grafana.db
+
+### Restore
+
+Просто замените файл grafana.db
+
+___
+
+[Инструкция](https://grafana.com/docs/administration/provisioning/#provisioning-grafana) для подготовки источников данных и дэшбордов
+
+Пример в файле проекта: /etc/grafana/provisioning/datasources/datasources.yaml
